@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resiter website</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="page-banner">
+      <div class="page-banner__circle">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="/" class="breadcrumb__link">&lt; Home</a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="/countries" class="breadcrumb__link">Countries</a>
+            </li>
+            <li class="breadcrumb__item breadcrumb__item--active">
+              <span class="breadcrumb__link" aria-current="page">Chile</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="page-banner__title">TITLE</h1>
+      </div>
+      <span class="page-banner__overlay"></span>
+      <img
+        src="https://picsum.photos/800/600"
+        width="800"
+        height="600"
+        alt="A beautiful banner"
+        class="page-banner__image"
+      />
+    </section>
+    <section class="hero-skew">
+      <div class="hero-skew__content">
+        <h2 class="hero-skew__title">Titulo de la sección</h2>
+        <p class="hero-skew__description">
+          Para proyectar el futuro, hay que honrar el camino recorrido. La
+          historia no es solo una línea de tiempo, es la base que ha forjado a
+          la empresa como líder en la gestión de residuos sostenibles y en la
+          transición para un futuro de economías circulares.
+        </p>
+      </div>
+      <img
+        src="./assets/images/waves-decorate.svg"
+        alt="Decorative waves"
+        class="hero-skew__decoration"
+      />
+    </section>
+
+    <section class="category-tabs">
+      <nav class="category-tabs__wrapper-list">
+        <ul data-tabs class="category-tabs__list">
+          <li>
+            <a data-tabby-default href="#harry" class="category-tabs__button"
+              >Gestión y Valorización de Residuos</a
+            >
+          </li>
+          <li>
+            <a href="#hermione" class="category-tabs__button"
+              >Tratamiento de Aguas</a
+            >
+          </li>
+          <li>
+            <a href="#neville" class="category-tabs__button">Waste to Energy</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="category-tabs__content" id="harry">
+        Gestión y Valorización de Residuos
+      </div>
+      <div class="category-tabs__content" id="hermione">
+        Tratamiento de Aguas
+      </div>
+      <div class="category-tabs__content" id="neville">Waste to Energy</div>
+    </section>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/js/tabby.polyfills.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

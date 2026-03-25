@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resiter website</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="page-banner">
+      <div class="page-banner__circle">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="/" class="breadcrumb__link">&lt; Home</a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="/countries" class="breadcrumb__link">Countries</a>
+            </li>
+            <li class="breadcrumb__item breadcrumb__item--active">
+              <span class="breadcrumb__link" aria-current="page">Chile</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="page-banner__title">EQUIPO CON VISIÓN SOSTENIBLE</h1>
+      </div>
+      <span class="page-banner__overlay"></span>
+      <img
+        src="https://picsum.photos/800/600"
+        width="800"
+        height="600"
+        alt="A beautiful banner"
+        class="page-banner__image"
+      />
+    </section>
+    <section class="hero-skew">
+      <div class="hero-skew__content">
+        <h2 class="hero-skew__title">Titulo de la sección</h2>
+        <p class="hero-skew__description">
+          Para proyectar el futuro, hay que honrar el camino recorrido. La
+          historia no es solo una línea de tiempo, es la base que ha forjado a
+          la empresa como líder en la gestión de residuos sostenibles y en la
+          transición para un futuro de economías circulares.
+        </p>
+      </div>
+      <img
+        src="./assets/images/waves-decorate.svg"
+        alt="Decorative waves"
+        class="hero-skew__decoration"
+      />
+    </section>
+    <section class="rich-text-content">
+      <h2>NUESTRAS OPERACIONES EN PERÚ</h2>
+      <p>
+        En Perú, Resiter entrega soluciones integrales de gestión y valorización
+        de residuos industriales, apoyando a empresas de sectores clave como la
+        minería, energía, manufactura, agroindustria y saneamiento en su camino
+        hacia operaciones más limpias, eficientes y sostenibles.
+      </p>
+      <p>
+        Con una sólida experiencia regional, Resiter Perú desarrolla servicios
+        personalizados que abarcan desde el manejo en origen y logística
+        especializada, hasta el tratamiento, valorización y disposición final
+        segura de residuos peligrosos y no peligrosos. A través de las plantas,
+        infraestructura y equipos altamente capacitados, asegura trazabilidad,
+        cumplimiento normativo y eficiencia operativa.
+      </p>
+      <p>
+        El enfoque está basado en la economía circular, buscando reducir la
+        generación de residuos y maximizar la recuperación de materiales, con un
+        fuerte compromiso con la innovación ambiental y el desarrollo de
+        soluciones que agreguen valor tanto al cliente como al entorno.En Perú,
+        después de 15 años de operación, Resiter no solo gestiona residuos:
+        transforma desafíos ambientales en oportunidades de sostenibilidad.
+      </p>
+    </section>
+    <section class="contact-card">
+      <h2 class="contact-card__title">Contacto</h2>
+      <p class="contact-card__subtitle">Recepción</p>
+      <p class="contact-card__description">
+        Los Conquistadores 2752 Providencia - Santiago, Chile +56 2 26567575 -
+        Anexo 100.
+      </p>
+      <img
+        src="https://placehold.co/600x400?text=Flag"
+        width="108"
+        height="72"
+        alt="Flag of Chile"
+        class="contact-card__image"
+      />
+    </section>
+    <section class="country-selector">
+      <h2 class="country-selector__title">
+        Conoce más de nuestras operaciones en los siguientes países
+      </h2>
+      <ul class="country-selector__list">
+        <li class="country-selector__item">
+          <a href="/countries/colombia" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Colombia"
+              width="108"
+              height="72"
+              alt="Flag of Colombia"
+              class="country-selector__flag"
+            />
+            Colombia
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/spain" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Spain"
+              width="108"
+              height="72"
+              alt="Flag of Spain"
+              class="country-selector__flag"
+            />
+            España
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/mexico" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Mexico"
+              width="108"
+              height="72"
+              alt="Flag of Mexico"
+              class="country-selector__flag"
+            />
+            México
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/peru" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Peru"
+              width="108"
+              height="72"
+              alt="Flag of Peru"
+              class="country-selector__flag"
+            />
+            Perú
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/uruguay" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Uruguay"
+              width="108"
+              height="72"
+              alt="Flag of Uruguay"
+              class="country-selector__flag"
+            />
+            Uruguay
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="category-tabs">
+      <nav class="category-tabs__wrapper-list">
+        <ul data-tabs class="category-tabs__list">
+          <li>
+            <a data-tabby-default href="#harry" class="category-tabs__button"
+              >Gestión y Valorización de Residuos</a
+            >
+          </li>
+          <li>
+            <a href="#hermione" class="category-tabs__button"
+              >Tratamiento de Aguas</a
+            >
+          </li>
+          <li>
+            <a href="#neville" class="category-tabs__button">Waste to Energy</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="category-tabs__content" id="harry">
+        Gestión y Valorización de Residuos
+      </div>
+      <div class="category-tabs__content" id="hermione">
+        Tratamiento de Aguas
+      </div>
+      <div class="category-tabs__content" id="neville">Waste to Energy</div>
+    </section>
+    <section class="bento-grid">
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/1/800/800"
+          alt="Industrial 1"
+          class="bento-grid__image"
+        />
+      </figure>
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/2/800/800"
+          alt="Industrial 2"
+          class="bento-grid__image"
+        />
+      </figure>
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/3/800/800"
+          alt="Industrial 3"
+          class="bento-grid__image"
+        />
+      </figure>
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/4/800/800"
+          alt="Industrial 4"
+          class="bento-grid__image"
+        />
+      </figure>
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/5/800/800"
+          alt="Industrial 5"
+          class="bento-grid__image"
+        />
+      </figure>
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/6/800/800"
+          alt="Industrial 6"
+          class="bento-grid__image"
+        />
+      </figure>
+      <figure class="bento-grid__item">
+        <img
+          src="https://picsum.photos/seed/7/800/800"
+          alt="Industrial 7"
+          class="bento-grid__image"
+        />
+      </figure>
+    </section>
+    <section class="carousel theme--primary">
+      <h3 class="carousel__title">NOTICIAS CORPORATIVAS</h3>
+      <div class="embla-carousel">
+        <div class="embla-carousel__viewport">
+          <div class="embla-carousel__container">
+            <div class="embla-carousel__slide">
+              <article class="post-card post-card--blue">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="embla-carousel__controls">
+          <div class="embla-carousel__buttons">
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-prev"
+            >
+              <svg
+                role="img"
+                aria-label="Previous slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                ></path>
+              </svg>
+            </button>
+            <div class="embla-carousel__selected-snap-display">1 / 0</div>
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-next"
+            >
+              <svg
+                role="img"
+                aria-label="Next slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla-carousel__dots"></div>
+        </div>
+      </div>
+      <div class="carousel-curve"></div>
+    </section>
+    <section class="carousel theme--secondary">
+      <h3 class="carousel__title">NOTICIAS CORPORATIVAS</h3>
+      <div class="embla-carousel">
+        <div class="embla-carousel__viewport">
+          <div class="embla-carousel__container">
+            <div class="embla-carousel__slide">
+              <article class="post-card post-card--blue">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="embla-carousel__controls">
+          <div class="embla-carousel__buttons">
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-prev"
+            >
+              <svg
+                role="img"
+                aria-label="Previous slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                ></path>
+              </svg>
+            </button>
+            <div class="embla-carousel__selected-snap-display">1 / 0</div>
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-next"
+            >
+              <svg
+                role="img"
+                aria-label="Next slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla-carousel__dots"></div>
+        </div>
+      </div>
+    </section>
+    <section class="carousel theme--primary">
+      <h3 class="carousel__title">NOTICIAS CORPORATIVAS</h3>
+      <div class="embla-carousel">
+        <div class="embla-carousel__viewport">
+          <div class="embla-carousel__container">
+            <div class="embla-carousel__slide">
+              <article class="post-card post-card--blue">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="embla-carousel__controls">
+          <div class="embla-carousel__buttons">
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-prev"
+            >
+              <svg
+                role="img"
+                aria-label="Previous slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                ></path>
+              </svg>
+            </button>
+            <div class="embla-carousel__selected-snap-display">1 / 0</div>
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-next"
+            >
+              <svg
+                role="img"
+                aria-label="Next slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla-carousel__dots"></div>
+        </div>
+      </div>
+      <div class="carousel-curve"></div>
+    </section>
+    <section class="carousel theme--secondary">
+      <h3 class="carousel__title">NOTICIAS CORPORATIVAS</h3>
+      <div class="embla-carousel">
+        <div class="embla-carousel__viewport">
+          <div class="embla-carousel__container">
+            <div class="embla-carousel__slide">
+              <article class="post-card post-card--blue">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="embla-carousel__controls">
+          <div class="embla-carousel__buttons">
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-prev"
+            >
+              <svg
+                role="img"
+                aria-label="Previous slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                ></path>
+              </svg>
+            </button>
+            <div class="embla-carousel__selected-snap-display">1 / 0</div>
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-next"
+            >
+              <svg
+                role="img"
+                aria-label="Next slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla-carousel__dots"></div>
+        </div>
+      </div>
+    </section>
+    <section class="video-banner">
+      <div
+        class="video-banner__decoration video-banner__decoration--left"
+      ></div>
+      <div class="video-banner__container">
+        <video class="video-banner__video" autoplay muted loop playsinline>
+          <source src="./assets/images/video.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-banner__overlay"></div>
+      </div>
+      <div
+        class="video-banner__decoration video-banner__decoration--right"
+      ></div>
+    </section>
+    <section class="services">
+      <div class="services__wrapper-content">
+        <h3 class="services__title">¿QUÉ HACEMOS?</h3>
+        <p class="services__description">
+          Gestionamos y valorizamos residuos y recursos mediante procesos
+          tecnológicos eficientes, integrando principios de economía circular
+          para entregar soluciones sostenibles y competitivas al sector
+          industrial.
+        </p>
+        <img
+          class="services__image"
+          src="./assets/images/services.png"
+          alt="Nuestros Servicios"
+        />
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero__embla">
+        <div class="hero__embla-viewport">
+          <div class="hero__embla-container">
+            <div class="hero__embla-slide">
+              <img
+                class="hero__image"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+                alt="Imagen de fondo del héroe"
+              />
+            </div>
+            <div class="hero__embla-slide">
+              <img
+                class="hero__image"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+                alt="Imagen de fondo del héroe"
+              />
+            </div>
+            <div class="hero__embla-slide">
+              <img
+                class="hero__image"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+                alt="Imagen de fondo del héroe"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hero__embla-dots"></div>
+      </div>
+
+      <svg
+        class="hero__circle"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1141"
+        height="1143"
+        fill="none"
+        viewBox="0 0 1141 1143"
+      >
+        <ellipse
+          cx="570.5"
+          cy="571.5"
+          fill="#073763"
+          fill-opacity=".5"
+          rx="570.5"
+          ry="571.5"
+        />
+      </svg>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Desarrollo sostenible para las industrias</h1>
+      </div>
+    </section>
+    <section class="key-metrics">
+      <img
+        class="key-metrics__logo"
+        src="./assets/images/logo-resiter.png"
+        alt="resiter logo"
+      />
+      <div class="key-metrics__grid">
+        <div class="key-metrics__item">
+          <img src="./assets/images/icon-planta.png" alt="Icono de planta" />
+          <h2 class="key-metrics__number">
+            <span>+130 </span>
+          </h2>
+          <p class="key-metrics__label">Plantas de tratamiento de aguas</p>
+        </div>
+        <div class="key-metrics__item">
+          <img src="./assets/images/icon-agua.png" alt="Icono de agua" />
+          <h2 class="key-metrics__number">
+            <span>+10 </span><span class="key-metrics__unit">MILL. M³</span>
+          </h2>
+          <p class="key-metrics__label">de Agua tratada/año</p>
+        </div>
+        <div class="key-metrics__item">
+          <img
+            src="./assets/images/icon-residuos.png"
+            alt="Icono de residuos"
+          />
+          <h2 class="key-metrics__number">
+            <span>+1.6</span> <span class="key-metrics__unit">MILL. TON</span>
+          </h2>
+          <p class="key-metrics__label">de residuos gestionados/año</p>
+        </div>
+        <div class="key-metrics__item">
+          <img
+            src="./assets/images/icon-valorizado.png"
+            alt="Icono de valorizado"
+          />
+          <h2 class="key-metrics__number">
+            <span>+750 </span><span class="key-metrics__unit">MILL. TON</span>
+          </h2>
+          <p class="key-metrics__label">de residuos valorizados/año</p>
+        </div>
+      </div>
+      <div class="key-metrics__arc"></div>
+    </section>
+    <section class="industries">
+      <h3 class="industries__title">INDUSTRIAS DONDE OPERAMOS</h3>
+      <div class="industries__list">
+        <article class="industry-card">
+          <div class="industry-card__header">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+              alt="Laptop en escritorio"
+              class="industry-card__image"
+            />
+
+            <div class="industry-card__date-badge">
+              <h3 class="industry-card__title">MINERIA</h3>
+            </div>
+          </div>
+          <div class="industry-card__content">
+            <p class="industry-card__description">
+              Para proyectar el futuro, hay que honrar el camino recorrido. La
+              historia no es solo una línea de tiempo.
+            </p>
+          </div>
+        </article>
+        <article class="industry-card industry-card--secondary">
+          <div class="industry-card__header">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+              alt="Laptop en escritorio"
+              class="industry-card__image"
+            />
+
+            <div class="industry-card__date-badge">
+              <h3 class="industry-card__title">FORESTAL & CELULOSA</h3>
+            </div>
+          </div>
+          <div class="industry-card__content">
+            <p class="industry-card__description">
+              Para proyectar el futuro, hay que honrar el camino recorrido. La
+              historia no es solo una línea de tiempo.
+            </p>
+          </div>
+        </article>
+        <article class="industry-card">
+          <div class="industry-card__header">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+              alt="Laptop en escritorio"
+              class="industry-card__image"
+            />
+
+            <div class="industry-card__date-badge">
+              <h3 class="industry-card__title">MINERIA</h3>
+            </div>
+          </div>
+          <div class="industry-card__content">
+            <p class="industry-card__description">
+              Para proyectar el futuro, hay que honrar el camino recorrido. La
+              historia no es solo una línea de tiempo.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="ubication">
+      <div>
+        <img
+          src="./assets/images/logo-resiter.png"
+          alt=" resiter logo"
+          class="ubication__logo"
+        />
+        <h3 class="ubication__title">¿DÓNDE OPERAMOS?</h3>
+      </div>
+      <div class="ubication__map-container">
+        <img
+          src="./assets/images/map.png"
+          alt="Mapa de operaciones"
+          class="ubication__map"
+        />
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Colombia"
+            class="ubication__flag ubication__flag--mexico"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Colombia"
+            class="ubication__flag ubication__flag--colombia"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Perú"
+            class="ubication__flag ubication__flag--peru"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Chile"
+            class="ubication__flag ubication__flag--chile"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Uruguay"
+            class="ubication__flag ubication__flag--uruguay"
+          />
+        </a>
+      </div>
+    </section>
+    <section class="carousel theme--thertiary">
+      <h3 class="carousel__title">NOTICIAS CORPORATIVAS</h3>
+      <div class="embla-carousel">
+        <div class="embla-carousel__viewport">
+          <div class="embla-carousel__container">
+            <div class="embla-carousel__slide">
+              <article class="post-card post-card--blue">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="embla-carousel__controls">
+          <div class="embla-carousel__buttons">
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-prev"
+            >
+              <svg
+                role="img"
+                aria-label="Previous slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                ></path>
+              </svg>
+            </button>
+            <div class="embla-carousel__selected-snap-display">1 / 0</div>
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-next"
+            >
+              <svg
+                role="img"
+                aria-label="Next slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla-carousel__dots"></div>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <article class="feature-banner">
+        <img
+          src="https://picsum.photos/800/600"
+          width="800"
+          height="600"
+          alt="A beautiful banner"
+          class="feature-banner__image"
+        />
+        <div class="feature-banner__content">
+          <div class="feature-banner__content-left">
+            <h3 class="feature-banner__title">
+              Compromiso con la excelencia operacional
+            </h3>
+          </div>
+          <div class="feature-banner__content-right">
+            <p>
+              En el centro de valorización Eccofeed se complementa la propuesta
+              de valor de Resiter al enfocarse en la valorización orgánica,
+              transformando residuos alimentarios en materia prima para la
+              nutrición animal.
+            </p>
+            <p class="feature-banner__link">
+              <a href="#" class="btn-outline-white">ver más</a>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="feature-banner feature--directory">
+        <img
+          src="https://picsum.photos/800/600"
+          width="800"
+          height="600"
+          alt="A beautiful banner"
+          class="feature-banner__image"
+        />
+        <div class="feature-banner__content">
+          <div class="feature-banner__content-left">
+            <h3 class="feature-banner__title">RAÚL ALCAÍNO LIHN</h3>
+            <p class="feature-banner__subtitle">Presidente del Directorio</p>
+          </div>
+          <div class="feature-banner__content-right">
+            <p>
+              En el centro de valorización Eccofeed se complementa la propuesta
+              de valor de Resiter al enfocarse en la valorización orgánica,
+              transformando residuos alimentarios en materia prima para la
+              nutrición animal.
+            </p>
+            <p class="feature-banner__link">
+              <a href="#" class="btn-outline-white">ver más</a>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="feature-banner feature--small">
+        <img
+          src="https://picsum.photos/800/600"
+          width="800"
+          height="600"
+          alt="A beautiful banner"
+          class="feature-banner__image"
+        />
+        <div class="feature-banner__content">
+          <div class="feature-banner__content-left">
+            <h3 class="feature-banner__title">
+              Compromiso con la excelencia operacional
+            </h3>
+          </div>
+          <div class="feature-banner__content-right">
+            <p>
+              En el centro de valorización Eccofeed se complementa la propuesta
+              de valor de Resiter al enfocarse en la valorización orgánica,
+              transformando residuos alimentarios en materia prima para la
+              nutrición animal.
+            </p>
+            <p class="feature-banner__link">
+              <a href="#" class="btn-outline-white">ver más</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- tabs js -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/js/tabby.polyfills.min.js"></script>
+    <!-- carousel -->
+    <script src="https://unpkg.com/embla-carousel@8.3.1/embla-carousel.umd.js"></script>
+
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

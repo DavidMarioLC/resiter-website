@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resiter website</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="page-banner">
+      <div class="page-banner__circle">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="/" class="breadcrumb__link">&lt; Home</a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="/countries" class="breadcrumb__link">Countries</a>
+            </li>
+            <li class="breadcrumb__item breadcrumb__item--active">
+              <span class="breadcrumb__link" aria-current="page">Chile</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="page-banner__title">CHILE</h1>
+      </div>
+      <span class="page-banner__overlay"></span>
+      <img
+        src="https://picsum.photos/800/600"
+        width="800"
+        height="600"
+        alt="A beautiful banner"
+        class="page-banner__image"
+      />
+    </section>
+    <section class="hero-skew">
+      <div class="hero-skew__content">
+        <h2 class="hero-skew__title">Titulo de la sección</h2>
+        <p class="hero-skew__description">
+          Para proyectar el futuro, hay que honrar el camino recorrido. La
+          historia no es solo una línea de tiempo, es la base que ha forjado a
+          la empresa como líder en la gestión de residuos sostenibles y en la
+          transición para un futuro de economías circulares.
+        </p>
+      </div>
+      <img
+        src="./assets/images/waves-decorate.svg"
+        alt="Decorative waves"
+        class="hero-skew__decoration"
+      />
+    </section>
+    <section class="rich-text-content">
+      <h2>NUESTRAS OPERACIONES EN PERÚ</h2>
+      <p>
+        En Perú, Resiter entrega soluciones integrales de gestión y valorización
+        de residuos industriales, apoyando a empresas de sectores clave como la
+        minería, energía, manufactura, agroindustria y saneamiento en su camino
+        hacia operaciones más limpias, eficientes y sostenibles.
+      </p>
+      <p>
+        Con una sólida experiencia regional, Resiter Perú desarrolla servicios
+        personalizados que abarcan desde el manejo en origen y logística
+        especializada, hasta el tratamiento, valorización y disposición final
+        segura de residuos peligrosos y no peligrosos. A través de las plantas,
+        infraestructura y equipos altamente capacitados, asegura trazabilidad,
+        cumplimiento normativo y eficiencia operativa.
+      </p>
+      <p>
+        El enfoque está basado en la economía circular, buscando reducir la
+        generación de residuos y maximizar la recuperación de materiales, con un
+        fuerte compromiso con la innovación ambiental y el desarrollo de
+        soluciones que agreguen valor tanto al cliente como al entorno.En Perú,
+        después de 15 años de operación, Resiter no solo gestiona residuos:
+        transforma desafíos ambientales en oportunidades de sostenibilidad.
+      </p>
+    </section>
+    <section class="contact-card">
+      <h2 class="contact-card__title">Contacto</h2>
+      <p class="contact-card__subtitle">Recepción</p>
+      <p class="contact-card__description">
+        Los Conquistadores 2752 Providencia - Santiago, Chile +56 2 26567575 -
+        Anexo 100.
+      </p>
+      <img
+        src="https://placehold.co/600x400?text=Flag"
+        width="108"
+        height="72"
+        alt="Flag of Chile"
+        class="contact-card__image"
+      />
+    </section>
+    <div class="locations-card">
+      <!-- Contenedor del Mapa -->
+      <div class="locations-card__map-container">
+        <iframe
+          title="Google Maps"
+          id="map-frame"
+          class="locations-card__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.1234!2d-70.6865!3d-33.5601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMzJzM2LjQiUyA3MMKwNDEnMTEuNCJX!5e0!3m2!1ses!2scl!4v1620000000000!5m2!1ses!2scl"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <!-- Lista de Ubicaciones -->
+      <div class="locations-card__list" id="locations-list">
+        <div
+          class="location-item location-item--active"
+          data-lat="-33.5601"
+          data-lng="-70.6865"
+          data-zoom="15"
+        >
+          <h3 class="location-item__title">Sucursal Santiago</h3>
+          <p class="location-item__address">
+            José Joaquín Prieto Vial 9750, El Bosque, Santiago
+          </p>
+          <p class="location-item__phone">+ 56 2 2656 7575 Anexo 100</p>
+        </div>
+
+        <div
+          class="location-item"
+          data-lat="-20.2167"
+          data-lng="-70.1500"
+          data-zoom="15"
+        >
+          <h3 class="location-item__title">Sucursal Iquique</h3>
+          <p class="location-item__address">
+            San Martín 255 Oficina 31, Iquique
+          </p>
+          <p class="location-item__phone">+ 56 9 3414 5300</p>
+        </div>
+
+        <div
+          class="location-item"
+          data-lat="-34.1701"
+          data-lng="-70.7406"
+          data-zoom="15"
+        >
+          <h3 class="location-item__title">Sucursal Centro Sur, Rancagua</h3>
+          <p class="location-item__address">
+            Carretera del Ácido S/N Sector el Olivar, Rancagua
+          </p>
+          <p class="location-item__phone">+ 56 72 233 4455</p>
+        </div>
+
+        <div
+          class="location-item"
+          data-lat="-36.8271"
+          data-lng="-73.0503"
+          data-zoom="15"
+        >
+          <h3 class="location-item__title">Sucursal Concepción</h3>
+          <p class="location-item__address">Av. Prat 123, Concepción</p>
+          <p class="location-item__phone">+ 56 41 222 3344</p>
+        </div>
+      </div>
+    </div>
+    <section class="features">
+      <article class="feature-banner">
+        <img
+          src="https://picsum.photos/800/600"
+          width="800"
+          height="600"
+          alt="A beautiful banner"
+          class="feature-banner__image"
+        />
+        <div class="feature-banner__content">
+          <div class="feature-banner__content-left">
+            <h3 class="feature-banner__title">
+              Compromiso con la excelencia operacional
+            </h3>
+          </div>
+          <div class="feature-banner__content-right">
+            <p>
+              En el centro de valorización Eccofeed se complementa la propuesta
+              de valor de Resiter al enfocarse en la valorización orgánica,
+              transformando residuos alimentarios en materia prima para la
+              nutrición animal.
+            </p>
+            <p class="feature-banner__link">
+              <a href="#" class="btn-outline-white">ver más</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="country-selector">
+      <h2 class="country-selector__title">
+        Conoce más de nuestras operaciones en los siguientes países
+      </h2>
+      <ul class="country-selector__list">
+        <li class="country-selector__item">
+          <a href="/countries/colombia" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Colombia"
+              width="108"
+              height="72"
+              alt="Flag of Colombia"
+              class="country-selector__flag"
+            />
+            Colombia
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/spain" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Spain"
+              width="108"
+              height="72"
+              alt="Flag of Spain"
+              class="country-selector__flag"
+            />
+            España
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/mexico" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Mexico"
+              width="108"
+              height="72"
+              alt="Flag of Mexico"
+              class="country-selector__flag"
+            />
+            México
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/peru" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Peru"
+              width="108"
+              height="72"
+              alt="Flag of Peru"
+              class="country-selector__flag"
+            />
+            Perú
+          </a>
+        </li>
+        <li class="country-selector__item">
+          <a href="/countries/uruguay" class="country-selector__link">
+            <img
+              src="https://placehold.co/600x400?text=Uruguay"
+              width="108"
+              height="72"
+              alt="Flag of Uruguay"
+              class="country-selector__flag"
+            />
+            Uruguay
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

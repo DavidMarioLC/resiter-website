@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resiter website</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <!-- Logo -->
+        <a href="#" class="header__logo-container">
+          <img
+            src="./assets/images/logo-resiter.png"
+            alt="Resiter Logo"
+            class="header__logo"
+          />
+        </a>
+
+        <!-- Botón Hamburguesa -->
+        <button
+          type="button"
+          class="header__toggle"
+          id="menu-toggle"
+          aria-label="Abrir menú"
+        >
+          <div class="header__toggle-bar"></div>
+          <div class="header__toggle-bar"></div>
+          <div class="header__toggle-bar"></div>
+        </button>
+
+        <!-- Navegación -->
+        <nav class="header__nav" id="header-nav">
+          <ul class="header__list">
+            <li class="header__item header__item--has-submenu">
+              <span class="header__link">Quiénes somos</span>
+              <!-- Submenú -->
+              <ul class="header__submenu">
+                <li class="header__submenu-item">
+                  <a href="/proposito.html" class="header__submenu-link"
+                    >Propósito y valores</a
+                  >
+                </li>
+                <li class="header__submenu-item">
+                  <a href="/historia.html" class="header__submenu-link"
+                    >Historia e Hitos</a
+                  >
+                </li>
+                <li class="header__submenu-item">
+                  <a href="/estructura.html" class="header__submenu-link"
+                    >Estructura y Directorio</a
+                  >
+                </li>
+                <li class="header__submenu-item">
+                  <a href="/inversiones.html" class="header__submenu-link"
+                    >Cifras de Inversiones</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="header__item">
+              <a href="/sostenibilidad.html" class="header__link"
+                >Sostenibilidad</a
+              >
+            </li>
+            <li class="header__item">
+              <a href="/noticias.html" class="header__link">Noticias</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link"
+                >Trabaja con nosotros
+                <span class="header__icon-external">↗</span></a
+              >
+            </li>
+            <li class="header__item">
+              <a href="contacto.html" class="header__link">Contacto</a>
+            </li>
+          </ul>
+
+          <!-- Selector de idioma -->
+          <div class="header__lang">
+            <a href="#" class="header__lang-link">English</a>
+            <span>|</span>
+            <a href="#" class="header__lang-link header__lang-link--active"
+              >Español</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="main-navigation-and-hero">
+      <div class="main-navigation-wrapper">
+        <div
+          class="main-navigation__backdrop"
+          id="js-navigation-backdrop"
+        ></div>
+        <nav class="main-navigation" id="js-main-nav">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <button type="button" class="main-navigation__link">
+                Gestión y Valorización de Residuos
+              </button>
+              <ul class="main-navigation__submenu">
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Agroindustria</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Alimentos & Bebidas</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Forestal & Celulosa</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Minería</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Oil & Gas</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Salmonera</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Otras Industrias</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="main-navigation__item">
+              <button type="button" class="main-navigation__link">
+                Tratamiento de Aguas
+              </button>
+              <ul class="main-navigation__submenu">
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Alimentos & Bebidas</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Minería</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Oil & Gas</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Salmonera</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="main-navigation__item">
+              <button type="button" class="main-navigation__link">
+                WasbuttonEnergy
+              </button>
+              <ul class="main-navigation__submenu">
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Agroindustria</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Minería</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="main-navigation__item">
+              <button type="button" class="main-navigation__link">
+                Tipos de Residuos
+              </button>
+              <ul class="main-navigation__submenu">
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Acero, Aluminio y Cobre</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Aguas Contaminadas</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Eléctricos y Electrónicos</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a href="/menu2.html" class="main-navigation__submenu-link"
+                    >Escombros</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="main-navigation__item">
+              <button type="button" class="main-navigation__link">
+                Centros de valorización y economía circular
+              </button>
+              <ul class="main-navigation__submenu">
+                <li class="main-navigation__submenu-item">
+                  <a
+                    href="/menu2-bentogrid.html"
+                    class="main-navigation__submenu-link"
+                    >Calagro</a
+                  >
+                </li>
+                <li class="main-navigation__submenu-item">
+                  <a
+                    href="/menu2-bentogrid.html"
+                    class="main-navigation__submenu-link"
+                    >Eccofeed</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class="hero">
+        <nav class="secondary-navigation">
+          <ul class="secondary-navigation__list">
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Agroindustria</a
+              >
+            </li>
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Alimentos y Bebidas</a
+              >
+            </li>
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Forestal & Celulosa</a
+              >
+            </li>
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Minería</a
+              >
+            </li>
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Oil & Gas</a
+              >
+            </li>
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Salmonera</a
+              >
+            </li>
+            <li>
+              <a href="/menu2.html" class="secondary-navigation__link"
+                >Otras Industrias</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="hero__embla">
+          <div class="hero__embla-viewport">
+            <div class="hero__embla-container">
+              <div class="hero__embla-slide">
+                <img
+                  class="hero__image"
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+                  alt="Imagen de fondo del héroe"
+                />
+              </div>
+              <div class="hero__embla-slide">
+                <img
+                  class="hero__image"
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+                  alt="Imagen de fondo del héroe"
+                />
+              </div>
+              <div class="hero__embla-slide">
+                <img
+                  class="hero__image"
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+                  alt="Imagen de fondo del héroe"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hero__embla-dots"></div>
+        </div>
+
+        <svg
+          class="hero__circle"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1141"
+          height="1143"
+          fill="none"
+          viewBox="0 0 1141 1143"
+        >
+          <ellipse
+            cx="570.5"
+            cy="571.5"
+            fill="#073763"
+            fill-opacity=".5"
+            rx="570.5"
+            ry="571.5"
+          />
+        </svg>
+
+        <div class="hero__content">
+          <h1 class="hero__title">Desarrollo sostenible para las industrias</h1>
+        </div>
+      </section>
+    </div>
+    <section class="key-metrics">
+      <img
+        class="key-metrics__logo"
+        src="./assets/images/logo-resiter.png"
+        alt="resiter logo"
+      />
+      <div class="key-metrics__grid">
+        <div class="key-metrics__item">
+          <img src="./assets/images/icon-planta.png" alt="Icono de planta" />
+          <h2 class="key-metrics__number">
+            <span class="key-metrics__value">+130 </span>
+          </h2>
+          <p class="key-metrics__label">Plantas de tratamiento de aguas</p>
+        </div>
+        <div class="key-metrics__item">
+          <img src="./assets/images/icon-agua.png" alt="Icono de agua" />
+          <h2 class="key-metrics__number">
+            <span class="key-metrics__value">+10 </span
+            ><span class="key-metrics__unit">MILL. M³</span>
+          </h2>
+          <p class="key-metrics__label">de Agua tratada/año</p>
+        </div>
+        <div class="key-metrics__item">
+          <img
+            src="./assets/images/icon-residuos.png"
+            alt="Icono de residuos"
+          />
+          <h2 class="key-metrics__number">
+            <span class="key-metrics__value">+1.6</span>
+            <span class="key-metrics__unit">MILL. TON</span>
+          </h2>
+          <p class="key-metrics__label">de residuos gestionados/año</p>
+        </div>
+        <div class="key-metrics__item">
+          <img
+            src="./assets/images/icon-valorizado.png"
+            alt="Icono de valorizado"
+          />
+          <h2 class="key-metrics__number">
+            <span class="key-metrics__value">+750 </span
+            ><span class="key-metrics__unit">MILL. TON</span>
+          </h2>
+          <p class="key-metrics__label">de residuos valorizados/año</p>
+        </div>
+      </div>
+      <div class="key-metrics__arc"></div>
+    </section>
+    <section class="video-banner">
+      <div
+        class="video-banner__decoration video-banner__decoration--left"
+      ></div>
+      <div class="video-banner__container">
+        <video class="video-banner__video" autoplay muted loop playsinline>
+          <source
+            src="https://res.cloudinary.com/davidmariolc/video/upload/v1774453197/video_vpftdu.mp4"
+            type="video/mp4"
+          />
+          Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-banner__overlay"></div>
+      </div>
+      <div
+        class="video-banner__decoration video-banner__decoration--right"
+      ></div>
+    </section>
+    <section class="services">
+      <div class="services__wrapper-content">
+        <h3 class="services__title">¿QUÉ HACEMOS?</h3>
+        <p class="services__description">
+          Gestionamos y valorizamos residuos y recursos mediante procesos
+          tecnológicos eficientes, integrando principios de economía circular
+          para entregar soluciones sostenibles y competitivas al sector
+          industrial.
+        </p>
+        <img
+          class="services__image"
+          src="./assets/images/services.png"
+          alt="Nuestros Servicios"
+        />
+      </div>
+    </section>
+    <section class="industries">
+      <h3 class="industries__title">INDUSTRIAS DONDE OPERAMOS</h3>
+      <div class="industries__list">
+        <article class="industry-card">
+          <div class="industry-card__header">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+              alt="Laptop en escritorio"
+              class="industry-card__image"
+            />
+
+            <div class="industry-card__date-badge">
+              <h3 class="industry-card__title">MINERIA</h3>
+            </div>
+          </div>
+          <div class="industry-card__content">
+            <p class="industry-card__description">
+              Para proyectar el futuro, hay que honrar el camino recorrido. La
+              historia no es solo una línea de tiempo.
+            </p>
+            <a href="/single-industrias.html" class="btn-outline-white"
+              >Ver más</a
+            >
+          </div>
+        </article>
+        <article class="industry-card industry-card--secondary">
+          <div class="industry-card__header">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+              alt="Laptop en escritorio"
+              class="industry-card__image"
+            />
+
+            <div class="industry-card__date-badge">
+              <h3 class="industry-card__title">Oil & gas</h3>
+            </div>
+          </div>
+          <div class="industry-card__content">
+            <p class="industry-card__description">
+              Para proyectar el futuro, hay que honrar el camino recorrido. La
+              historia no es solo una línea de tiempo.
+            </p>
+            <a href="/single-industrias.html" class="btn-outline-blue"
+              >Ver más</a
+            >
+          </div>
+        </article>
+        <article class="industry-card">
+          <div class="industry-card__header">
+            <img
+              src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+              alt="Laptop en escritorio"
+              class="industry-card__image"
+            />
+
+            <div class="industry-card__date-badge">
+              <h3 class="industry-card__title">MINERIA</h3>
+            </div>
+          </div>
+          <div class="industry-card__content">
+            <p class="industry-card__description">
+              Para proyectar el futuro, hay que honrar el camino recorrido. La
+              historia no es solo una línea de tiempo.
+            </p>
+            <a href="/single-industrias.html" class="btn-outline-white"
+              >Ver más</a
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="ubication">
+      <div>
+        <img
+          src="./assets/images/logo-resiter.png"
+          alt=" resiter logo"
+          class="ubication__logo"
+        />
+        <h3 class="ubication__title">¿DÓNDE OPERAMOS?</h3>
+      </div>
+      <div class="ubication__map-container">
+        <img
+          src="./assets/images/map.png"
+          alt="Mapa de operaciones"
+          class="ubication__map"
+        />
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Colombia"
+            class="ubication__flag ubication__flag--mexico"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Colombia"
+            class="ubication__flag ubication__flag--colombia"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Perú"
+            class="ubication__flag ubication__flag--peru"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Chile"
+            class="ubication__flag ubication__flag--chile"
+          />
+        </a>
+
+        <a href="/single-paises.html">
+          <img
+            src="https://placehold.co/600x400?text=logo"
+            width="59"
+            height="59"
+            alt="Flag of Uruguay"
+            class="ubication__flag ubication__flag--uruguay"
+          />
+        </a>
+      </div>
+    </section>
+    <section class="carousel theme--tertiary">
+      <h3 class="carousel__title">NOTICIAS</h3>
+      <div class="embla-carousel">
+        <div class="embla-carousel__viewport">
+          <div class="embla-carousel__container">
+            <div class="embla-carousel__slide">
+              <article class="post-card post-card--blue">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo.
+                  </p>
+                  <a href="/single-noticias.html" class="btn-outline-white"
+                    >Ver más</a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                  <a href="/single-noticias.html" class="btn-outline-white"
+                    >Ver más</a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                  <a href="/single-noticias.html" class="btn-outline-white"
+                    >Ver más</a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="embla-carousel__slide">
+              <article class="post-card">
+                <div class="post-card__header">
+                  <img
+                    src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800"
+                    alt="Laptop en escritorio"
+                    class="post-card__image"
+                  />
+
+                  <div class="post-card__date-badge">
+                    <span class="post-card__month">Enero</span>
+                    <span class="post-card__day">10</span>
+                  </div>
+                </div>
+                <div class="post-card__content">
+                  <h2 class="post-card__title">Título del artículo</h2>
+                  <p class="post-card__description">
+                    Para proyectar el futuro, hay que honrar el camino
+                    recorrido. La historia no es solo una línea de tiempo, es la
+                    base que ha forjado a la empresa como líder en la gestión de
+                    residuos sostenibles y en la transición para un futuro de
+                    economías circulares.
+                  </p>
+                  <a href="/single-noticias.html" class="btn-outline-white"
+                    >Ver más</a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="embla-carousel__controls">
+          <div class="embla-carousel__buttons">
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-prev"
+            >
+              <svg
+                role="img"
+                aria-label="Previous slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                ></path>
+              </svg>
+            </button>
+            <div class="embla-carousel__selected-snap-display">1 / 0</div>
+            <button
+              type="button"
+              class="embla-carousel-button embla-carousel__button-next"
+            >
+              <svg
+                role="img"
+                aria-label="Next slide"
+                class="embla-carousel__button-svg"
+                viewBox="0 0 532 532"
+              >
+                <path
+                  fill="currentColor"
+                  d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="embla-carousel__dots"></div>
+        </div>
+      </div>
+      <p class="carousel__link-all">
+        <a href="/noticias.html" class="btn-outline-blue">Ver todas</a>
+      </p>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__side-left">
+          <img
+            class="footer__side-left-logo"
+            src="./assets/images/logo-resiter.png"
+            alt=""
+          />
+        </div>
+        <div class="footer__content">
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-title">Sobre Resiter</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="/proposito.html" class="footer__nav-link"
+                  >Propósito y valores</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="/historia.html" class="footer__nav-link"
+                  >Historia e hitos</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="/estructura.html" class="footer__nav-link"
+                  >Estructura y directorio</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="/inversiones.html" class="footer__nav-link"
+                  >Cifras de Inversiones</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-title">Normativas</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="/etica.html" class="footer__nav-link"
+                  >Ética y cumplimiento</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Canal de denuncias</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="Facebook"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M6.5 10v4h3v7h4v-7h3l1-4h-4V8c0-.545.455-1 1-1h3V3h-3c-2.723 0-5 2.277-5 5v2z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="X (Twitter)"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill="currentColor"
+                  d="m9.237 7.004l4.84-5.505H12.93L8.727 6.28L5.371 1.5H1.5l5.075 7.228L1.5 14.499h1.147l4.437-5.047l3.545 5.047H14.5zM7.666 8.791l-.514-.72L3.06 2.344h1.762l3.302 4.622l.514.72l4.292 6.007h-1.761z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="Instagram"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__side-right">
+          <img
+            class="footer__side-right-logo"
+            src="./assets/images/isos.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>
+          Los Conquistadores 2752 Providencia - Santiago, Chile / +562 2656 75
+          75 - Anexo 100
+        </p>
+      </div>
+    </footer>
+    <!-- scripts -->
+    <script src="https://unpkg.com/embla-carousel@8.3.1/embla-carousel.umd.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script>
+
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
