@@ -181,7 +181,7 @@
     top: 100%;
     left: 0;
     background-color: var(--white);
-    min-width: 200px;
+    min-width: 220px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 4px;
