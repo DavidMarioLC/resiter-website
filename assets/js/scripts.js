@@ -144,7 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const heroDotsNode = heroWrapperNode.querySelector(".hero__embla-dots");
 
       if (heroViewportNode && heroDotsNode) {
-        const emblaApi = EmblaCarousel(heroViewportNode, { loop: false });
+        const OPTIONS = { loop: true };
+        const PLUGINS = [EmblaCarouselAutoplay({ delay: 3000 })];
+
+        const emblaApi = EmblaCarousel(heroViewportNode, OPTIONS, PLUGINS);
+        emblaApi.plugins().autoplay?.play();
         addDotButtonAndClickHandlers(emblaApi, heroDotsNode);
       }
     }
