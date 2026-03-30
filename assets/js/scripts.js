@@ -408,11 +408,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Key metrics count-up animation
   gsap.utils.toArray(".key-metrics__value").forEach((element) => {
-    const text = element.textContent;
+    const text = element.textContent.trim();
     const hasPlus = text.includes("+");
-    const numericValue = parseFloat(text.replace(/[^0-9.]/g, ""));
+
+    // Remove all non-numeric characters except decimal point
+    // For numbers like 292.000, we need to determine if it's thousands separator or decimal
+    const cleanText = text.replace(/[^0-9.,]/g, "");
+
+    // Check if this is using dot as thousands separator (e.g., 292.000)
+    // or comma as decimal separator (e.g., 1,6)
+    let numericValue;
+    if (cleanText.includes(".") && cleanText.includes(",")) {
+      // Both present: dot is thousands, comma is decimal (e.g., 1.234,56)
+      numericValue = parseFloat(cleanText.replace(/\./g, "").replace(",", "."));
+    } else if (cleanText.includes(",")) {
+      // Only comma: it's a decimal separator (e.g., 1,6)
+      numericValue = parseFloat(cleanText.replace(",", "."));
+    } else if (cleanText.includes(".")) {
+      // Only dot: check if it's thousands or decimal
+      const parts = cleanText.split(".");
+      if (parts.length === 2 && parts[1].length === 3) {
+        // Likely thousands separator (e.g., 292.000)
+        numericValue = parseFloat(cleanText.replace(/\./g, ""));
+      } else {
+        // Likely decimal separator (e.g., 1.6)
+        numericValue = parseFloat(cleanText);
+      }
+    } else {
+      numericValue = parseFloat(cleanText);
+    }
 
     if (!isNaN(numericValue)) {
+      const hasDecimal =
+        text.includes(",") || (text.includes(".") && !text.match(/\.\d{3}/));
+
       gsap.fromTo(
         element,
         { textContent: 0 },
@@ -420,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
           textContent: numericValue,
           duration: 2,
           ease: "power2.out",
-          snap: { textContent: numericValue >= 10 ? 1 : 0.1 },
+          snap: { textContent: hasDecimal ? 0.1 : 1 },
           scrollTrigger: {
             trigger: ".key-metrics",
             start: "top 75%",
@@ -428,10 +457,16 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           onUpdate: function () {
             const currentValue = gsap.getProperty(element, "textContent");
-            const formattedValue =
-              numericValue >= 10
-                ? Math.floor(currentValue)
-                : currentValue.toFixed(1);
+            let formattedValue;
+
+            if (hasDecimal) {
+              // Format with decimal
+              formattedValue = currentValue.toFixed(1).replace(".", ",");
+            } else {
+              // Format with thousands separator
+              formattedValue = Math.floor(currentValue).toLocaleString("es-ES");
+            }
+
             element.textContent = (hasPlus ? "+" : "") + formattedValue + " ";
           },
         },
@@ -628,5 +663,114 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.6,
       },
       "-=0.3",
+    );
+
+  // Page Banner section animation
+  gsap
+    .timeline({
+      defaults: {
+        ease: "power3.out",
+        duration: 0.8,
+      },
+    })
+    .from(".page-banner__image", {
+      opacity: 0,
+      scale: 1.1,
+      duration: 1.2,
+    })
+    .from(
+      ".breadcrumb__item",
+      {
+        opacity: 0,
+        y: -20,
+        stagger: 0.1,
+        duration: 0.6,
+      },
+      "-=0.8",
+    )
+    .from(
+      ".page-banner__title",
+      {
+        opacity: 0,
+        y: 40,
+        duration: 0.9,
+      },
+      "-=0.4",
+    );
+
+  // Hero Skew section animation
+  gsap
+    .timeline({
+      defaults: {
+        ease: "power3.out",
+        duration: 0.8,
+      },
+      scrollTrigger: {
+        trigger: ".hero-skew",
+        start: "top 75%",
+        toggleActions: "play none none none",
+      },
+    })
+    .from(".hero-skew__title", {
+      opacity: 0,
+      y: 50,
+      duration: 0.9,
+    })
+    .from(
+      ".hero-skew__description",
+      {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+      },
+      "-=0.4",
+    )
+    .from(
+      ".hero-skew__decoration",
+      {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+      },
+      "-=0.6",
+    );
+
+  // Values section animation
+  gsap
+    .timeline({
+      defaults: {
+        ease: "power3.out",
+        duration: 0.8,
+      },
+      scrollTrigger: {
+        trigger: ".values",
+        start: "top 75%",
+        toggleActions: "play none none none",
+      },
+    })
+    .from(".values__title", {
+      opacity: 0,
+      y: 30,
+      duration: 0.6,
+    })
+    .from(
+      ".values__description",
+      {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+      },
+      "-=0.3",
+    )
+    .from(
+      ".values-card",
+      {
+        opacity: 0,
+        y: 60,
+        scale: 0.95,
+        stagger: 0.2,
+        duration: 0.9,
+      },
+      "-=0.2",
     );
 });
