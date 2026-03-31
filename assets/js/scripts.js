@@ -268,509 +268,596 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**--- animations --**/
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  if (typeof gsap !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-  // Header entrance animation - Staggered
-  const headerTimeline = gsap.timeline({
-    defaults: {
-      ease: "power3.out",
-      duration: 0.8,
-    },
-  });
-
-  headerTimeline
-    .from(".header__logo", {
-      opacity: 0,
-      y: -30,
-      duration: 0.6,
-    })
-    .from(
-      ".header__item",
-      {
-        opacity: 0,
-        y: -20,
-        stagger: 0.1,
-      },
-      "-=0.3",
-    )
-    .from(
-      ".header__lang",
-      {
-        opacity: 0,
-        y: -20,
-      },
-      "-=0.4",
-    )
-    .from(
-      ".header__toggle",
-      {
-        opacity: 0,
-        scale: 0.8,
-      },
-      "0.3",
-    );
-
-  // Main navigation entrance animation - Staggered
-  gsap.from(".main-navigation__item", {
-    opacity: 0,
-    x: -40,
-    stagger: {
-      amount: 0.5,
-      from: "start",
-    },
-    duration: 0.8,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".main-navigation",
-      start: "top 80%",
-      toggleActions: "play none none none",
-    },
-  });
-
-  // Hero section entrance animation - Staggered
-  const heroTimeline = gsap.timeline({
-    defaults: {
-      ease: "power3.out",
-      duration: 1,
-    },
-  });
-
-  // Secondary navigation animation only on desktop
-  gsap.matchMedia().add("(min-width: 768px)", () => {
-    heroTimeline.from(
-      ".secondary-navigation__link",
-      {
-        opacity: 0,
-        y: 30,
-        stagger: 0.08,
-      },
-      "0.5",
-    );
-  });
-
-  heroTimeline
-    .from(
-      ".hero__circle",
-      {
-        opacity: 0,
-        scale: 0.6,
-        duration: 1.2,
-      },
-      "0.5",
-    )
-    .from(
-      ".hero__title",
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-      },
-      "0.5",
-    );
-
-  // Key metrics section entrance animation - Staggered
-  gsap
-    .timeline({
+    // Header entrance animation - Staggered
+    const headerTimeline = gsap.timeline({
       defaults: {
         ease: "power3.out",
         duration: 0.8,
       },
+    });
+
+    headerTimeline
+      .from(".header__logo", {
+        opacity: 0,
+        y: -30,
+        duration: 0.6,
+      })
+      .from(
+        ".header__item",
+        {
+          opacity: 0,
+          y: -20,
+          stagger: 0.1,
+        },
+        "-=0.3",
+      )
+      .from(
+        ".header__lang",
+        {
+          opacity: 0,
+          y: -20,
+        },
+        "-=0.4",
+      )
+      .from(
+        ".header__toggle",
+        {
+          opacity: 0,
+          scale: 0.8,
+        },
+        "0.3",
+      );
+
+    // Main navigation entrance animation - Staggered
+    gsap.from(".main-navigation__item", {
+      opacity: 0,
+      x: -40,
+      stagger: {
+        amount: 0.5,
+        from: "start",
+      },
+      duration: 0.8,
+      ease: "power3.out",
       scrollTrigger: {
-        trigger: ".key-metrics",
-        start: "top 75%",
+        trigger: ".main-navigation",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
-    })
-    .from(".key-metrics__logo", {
-      opacity: 0,
-      y: -30,
-      duration: 0.6,
-    })
-    .from(
-      ".key-metrics__item",
-      {
-        opacity: 0,
-        y: 40,
-        stagger: 0.15,
+    });
+
+    // Hero section entrance animation - Staggered
+    const heroTimeline = gsap.timeline({
+      defaults: {
+        ease: "power3.out",
+        duration: 1,
       },
-      "-=0.3",
-    )
-    .from(
-      ".key-metrics__arc",
-      {
+    });
+
+    // Secondary navigation animation only on desktop
+    gsap.matchMedia().add("(min-width: 768px)", () => {
+      heroTimeline.from(
+        ".secondary-navigation__link",
+        {
+          opacity: 0,
+          y: 30,
+          stagger: 0.08,
+        },
+        "0.5",
+      );
+    });
+
+    heroTimeline
+      .from(
+        ".hero__circle",
+        {
+          opacity: 0,
+          scale: 0.6,
+          duration: 1.2,
+        },
+        "0.5",
+      )
+      .from(
+        ".hero__title",
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.8,
+        },
+        "0.5",
+      );
+
+    // Key metrics section entrance animation - Staggered
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".key-metrics",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".key-metrics__logo", {
         opacity: 0,
-        scaleX: 0,
-        transformOrigin: "center center",
-        duration: 0.8,
-      },
-      "-=0.4",
-    );
+        y: -30,
+        duration: 0.6,
+      })
+      .from(
+        ".key-metrics__item",
+        {
+          opacity: 0,
+          y: 40,
+          stagger: 0.15,
+        },
+        "-=0.3",
+      )
+      .from(
+        ".key-metrics__arc",
+        {
+          opacity: 0,
+          scaleX: 0,
+          transformOrigin: "center center",
+          duration: 0.8,
+        },
+        "-=0.4",
+      );
 
-  // Key metrics count-up animation
-  gsap.utils.toArray(".key-metrics__value").forEach((element) => {
-    const text = element.textContent.trim();
-    const hasPlus = text.includes("+");
+    // Key metrics count-up animation
+    gsap.utils.toArray(".key-metrics__value").forEach((element) => {
+      const text = element.textContent.trim();
+      const hasPlus = text.includes("+");
 
-    // Remove all non-numeric characters except decimal point
-    // For numbers like 292.000, we need to determine if it's thousands separator or decimal
-    const cleanText = text.replace(/[^0-9.,]/g, "");
+      // Remove all non-numeric characters except decimal point
+      // For numbers like 292.000, we need to determine if it's thousands separator or decimal
+      const cleanText = text.replace(/[^0-9.,]/g, "");
 
-    // Check if this is using dot as thousands separator (e.g., 292.000)
-    // or comma as decimal separator (e.g., 1,6)
-    let numericValue;
-    if (cleanText.includes(".") && cleanText.includes(",")) {
-      // Both present: dot is thousands, comma is decimal (e.g., 1.234,56)
-      numericValue = parseFloat(cleanText.replace(/\./g, "").replace(",", "."));
-    } else if (cleanText.includes(",")) {
-      // Only comma: it's a decimal separator (e.g., 1,6)
-      numericValue = parseFloat(cleanText.replace(",", "."));
-    } else if (cleanText.includes(".")) {
-      // Only dot: check if it's thousands or decimal
-      const parts = cleanText.split(".");
-      if (parts.length === 2 && parts[1].length === 3) {
-        // Likely thousands separator (e.g., 292.000)
-        numericValue = parseFloat(cleanText.replace(/\./g, ""));
+      // Check if this is using dot as thousands separator (e.g., 292.000)
+      // or comma as decimal separator (e.g., 1,6)
+      let numericValue;
+      if (cleanText.includes(".") && cleanText.includes(",")) {
+        // Both present: dot is thousands, comma is decimal (e.g., 1.234,56)
+        numericValue = parseFloat(
+          cleanText.replace(/\./g, "").replace(",", "."),
+        );
+      } else if (cleanText.includes(",")) {
+        // Only comma: it's a decimal separator (e.g., 1,6)
+        numericValue = parseFloat(cleanText.replace(",", "."));
+      } else if (cleanText.includes(".")) {
+        // Only dot: check if it's thousands or decimal
+        const parts = cleanText.split(".");
+        if (parts.length === 2 && parts[1].length === 3) {
+          // Likely thousands separator (e.g., 292.000)
+          numericValue = parseFloat(cleanText.replace(/\./g, ""));
+        } else {
+          // Likely decimal separator (e.g., 1.6)
+          numericValue = parseFloat(cleanText);
+        }
       } else {
-        // Likely decimal separator (e.g., 1.6)
         numericValue = parseFloat(cleanText);
       }
-    } else {
-      numericValue = parseFloat(cleanText);
-    }
 
-    if (!isNaN(numericValue)) {
-      const hasDecimal =
-        text.includes(",") || (text.includes(".") && !text.match(/\.\d{3}/));
+      if (!isNaN(numericValue)) {
+        const hasDecimal =
+          text.includes(",") || (text.includes(".") && !text.match(/\.\d{3}/));
 
-      gsap.fromTo(
-        element,
-        { textContent: 0 },
-        {
-          textContent: numericValue,
-          duration: 2,
-          ease: "power2.out",
-          snap: { textContent: hasDecimal ? 0.1 : 1 },
-          scrollTrigger: {
-            trigger: ".key-metrics",
-            start: "top 75%",
-            toggleActions: "play none none none",
+        gsap.fromTo(
+          element,
+          { textContent: 0 },
+          {
+            textContent: numericValue,
+            duration: 2,
+            ease: "power2.out",
+            snap: { textContent: hasDecimal ? 0.1 : 1 },
+            scrollTrigger: {
+              trigger: ".key-metrics",
+              start: "top 75%",
+              toggleActions: "play none none none",
+            },
+            onUpdate: function () {
+              const currentValue = gsap.getProperty(element, "textContent");
+              let formattedValue;
+
+              if (hasDecimal) {
+                // Format with decimal
+                formattedValue = currentValue.toFixed(1).replace(".", ",");
+              } else {
+                // Format with thousands separator
+                formattedValue =
+                  Math.floor(currentValue).toLocaleString("es-ES");
+              }
+
+              element.textContent = (hasPlus ? "+" : "") + formattedValue + " ";
+            },
           },
-          onUpdate: function () {
-            const currentValue = gsap.getProperty(element, "textContent");
-            let formattedValue;
+        );
+      }
+    });
 
-            if (hasDecimal) {
-              // Format with decimal
-              formattedValue = currentValue.toFixed(1).replace(".", ",");
-            } else {
-              // Format with thousands separator
-              formattedValue = Math.floor(currentValue).toLocaleString("es-ES");
-            }
-
-            element.textContent = (hasPlus ? "+" : "") + formattedValue + " ";
-          },
+    // Video banner entrance animation - Staggered
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
         },
+        scrollTrigger: {
+          trigger: ".video-banner",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".video-banner__decoration--left", {
+        opacity: 0,
+        x: -80,
+        duration: 0.8,
+      })
+      .from(
+        ".video-banner__container",
+        {
+          opacity: 0,
+          scale: 0.9,
+          duration: 1,
+        },
+        "-=0.5",
+      )
+      .from(
+        ".video-banner__decoration--right",
+        {
+          opacity: 0,
+          x: 80,
+          duration: 0.8,
+        },
+        "-=0.6",
       );
-    }
-  });
 
-  // Video banner entrance animation - Staggered
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".video-banner",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".video-banner__decoration--left", {
-      opacity: 0,
-      x: -80,
-      duration: 0.8,
-    })
-    .from(
-      ".video-banner__container",
-      {
-        opacity: 0,
-        scale: 0.9,
-        duration: 1,
-      },
-      "-=0.5",
-    )
-    .from(
-      ".video-banner__decoration--right",
-      {
-        opacity: 0,
-        x: 80,
-        duration: 0.8,
-      },
-      "-=0.6",
-    );
-
-  // Services section entrance animation - Staggered
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".services",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".services__title", {
-      opacity: 0,
-      y: 30,
-      duration: 0.6,
-    })
-    .from(
-      ".services__description",
-      {
-        opacity: 0,
-        y: 30,
-        duration: 0.7,
-      },
-      "-=0.3",
-    )
-    .from(
-      ".services__image",
-      {
-        opacity: 0,
-        scale: 0.95,
-        y: 40,
-        duration: 0.9,
-      },
-      "-=0.4",
-    );
-
-  // Industries section entrance animation - Staggered
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".industries",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".industries__title", {
-      opacity: 0,
-      y: 30,
-      duration: 0.6,
-    })
-    .from(
-      ".industry-card",
-      {
-        opacity: 0,
-        y: 60,
-        scale: 0.95,
-        stagger: 0.2,
-        duration: 0.9,
-      },
-      "-=0.3",
-    );
-
-  // Ubication section animation
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".ubication",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".ubication__logo", {
-      opacity: 0,
-      scale: 0.8,
-      duration: 0.6,
-    })
-    .from(
-      ".ubication__title",
-      {
+    // Services section entrance animation - Staggered
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".services",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".services__title", {
         opacity: 0,
         y: 30,
         duration: 0.6,
-      },
-      "-=0.3",
-    )
-    .from(
-      ".ubication__map",
-      {
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.9,
-      },
-      "-=0.2",
-    )
-    .from(
-      ".ubication__flag",
-      {
-        opacity: 0,
-        scale: 0,
-        stagger: 0.15,
-        duration: 0.6,
-      },
-      "-=0.4",
-    );
+      })
+      .from(
+        ".services__description",
+        {
+          opacity: 0,
+          y: 30,
+          duration: 0.7,
+        },
+        "-=0.3",
+      )
+      .from(
+        ".services__image",
+        {
+          opacity: 0,
+          scale: 0.95,
+          y: 40,
+          duration: 0.9,
+        },
+        "-=0.4",
+      );
 
-  // Carousel (Noticias) section animation
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".carousel",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".carousel__title", {
-      opacity: 0,
-      y: 30,
-      duration: 0.6,
-    })
-    .from(
-      ".post-card",
-      {
-        opacity: 0,
-        y: 60,
-        scale: 0.95,
-        stagger: 0.2,
-        duration: 0.9,
-      },
-      "-=0.2",
-    )
-    .from(
-      ".carousel__link-all",
-      {
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-      },
-      "-=0.3",
-    );
-
-  // Page Banner section animation
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-    })
-    .from(".page-banner__image", {
-      opacity: 0,
-      scale: 1.1,
-      duration: 1.2,
-    })
-    .from(
-      ".breadcrumb__item",
-      {
-        opacity: 0,
-        y: -20,
-        stagger: 0.1,
-        duration: 0.6,
-      },
-      "-=0.8",
-    )
-    .from(
-      ".page-banner__title",
-      {
-        opacity: 0,
-        y: 40,
-        duration: 0.9,
-      },
-      "-=0.4",
-    );
-
-  // Hero Skew section animation
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".hero-skew",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".hero-skew__title", {
-      opacity: 0,
-      y: 50,
-      duration: 0.9,
-    })
-    .from(
-      ".hero-skew__description",
-      {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-      },
-      "-=0.4",
-    )
-    .from(
-      ".hero-skew__decoration",
-      {
-        opacity: 0,
-        y: 60,
-        duration: 1,
-      },
-      "-=0.6",
-    );
-
-  // Values section animation
-  gsap
-    .timeline({
-      defaults: {
-        ease: "power3.out",
-        duration: 0.8,
-      },
-      scrollTrigger: {
-        trigger: ".values",
-        start: "top 75%",
-        toggleActions: "play none none none",
-      },
-    })
-    .from(".values__title", {
-      opacity: 0,
-      y: 30,
-      duration: 0.6,
-    })
-    .from(
-      ".values__description",
-      {
+    // Industries section entrance animation - Staggered
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".industries",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".industries__title", {
         opacity: 0,
         y: 30,
         duration: 0.6,
-      },
-      "-=0.3",
-    )
-    .from(
-      ".values-card",
-      {
+      })
+      .from(
+        ".industry-card",
+        {
+          opacity: 0,
+          y: 60,
+          scale: 0.95,
+          stagger: 0.2,
+          duration: 0.9,
+        },
+        "-=0.3",
+      );
+
+    // Ubication section animation
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".ubication",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".ubication__logo", {
         opacity: 0,
-        y: 60,
-        scale: 0.95,
-        stagger: 0.2,
+        scale: 0.8,
+        duration: 0.6,
+      })
+      .from(
+        ".ubication__title",
+        {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+        },
+        "-=0.3",
+      )
+      .from(
+        ".ubication__map",
+        {
+          opacity: 0,
+          scale: 0.95,
+          duration: 0.9,
+        },
+        "-=0.2",
+      )
+      .from(
+        ".ubication__flag",
+        {
+          opacity: 0,
+          scale: 0,
+          stagger: 0.15,
+          duration: 0.6,
+        },
+        "-=0.4",
+      );
+
+    // Carousel (Noticias) section animation
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".carousel",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".carousel__title", {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+      })
+      .from(
+        ".post-card",
+        {
+          opacity: 0,
+          y: 60,
+          scale: 0.95,
+          stagger: 0.2,
+          duration: 0.9,
+        },
+        "-=0.2",
+      )
+      .from(
+        ".carousel__link-all",
+        {
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+        },
+        "-=0.3",
+      );
+
+    // Page Banner section animation
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+      })
+      .from(".page-banner__image", {
+        opacity: 0,
+        scale: 1.1,
+        duration: 1.2,
+      })
+      .from(
+        ".breadcrumb__item",
+        {
+          opacity: 0,
+          y: -20,
+          stagger: 0.1,
+          duration: 0.6,
+        },
+        "-=0.8",
+      )
+      .from(
+        ".page-banner__title",
+        {
+          opacity: 0,
+          y: 40,
+          duration: 0.9,
+        },
+        "-=0.4",
+      );
+
+    // Hero Skew section animation
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".hero-skew",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".hero-skew__title", {
+        opacity: 0,
+        y: 50,
         duration: 0.9,
-      },
-      "-=0.2",
-    );
+      })
+      .from(
+        ".hero-skew__description",
+        {
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+        },
+        "-=0.4",
+      )
+      .from(
+        ".hero-skew__decoration",
+        {
+          opacity: 0,
+          y: 60,
+          duration: 1,
+        },
+        "-=0.6",
+      );
+
+    // Values section animation
+    gsap
+      .timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".values",
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      })
+      .from(".values__title", {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+      })
+      .from(
+        ".values__description",
+        {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+        },
+        "-=0.3",
+      )
+      .from(
+        ".values-card",
+        {
+          opacity: 0,
+          y: 60,
+          scale: 0.95,
+          stagger: 0.2,
+          duration: 0.9,
+        },
+        "-=0.2",
+      );
+  }
+
+  // Contact form validate
+
+  if (typeof window.JustValidate !== "undefined") {
+    const validate = new window.JustValidate("#form");
+    validate
+      .addField("#name", [
+        {
+          rule: "required",
+          errorMessage: "El nombre es requerido",
+        },
+        {
+          rule: "minLength",
+          value: 2,
+          errorMessage: "El nombre debe tener al menos 2 caracteres",
+        },
+      ])
+      .addField("#email", [
+        {
+          rule: "required",
+          errorMessage: "El email es requerido",
+        },
+        {
+          rule: "email",
+          errorMessage: "Ingresa un email válido",
+        },
+      ])
+      .addField("#phone", [
+        {
+          rule: "number",
+          errorMessage: "El teléfono debe ser un número",
+        },
+      ])
+      .addField("#country", [
+        {
+          rule: "required",
+          errorMessage: "El país es requerido",
+        },
+        {
+          rule: "minLength",
+          value: 2,
+          errorMessage: "El país debe tener al menos 2 caracteres",
+        },
+      ])
+      .addField("#city", [
+        {
+          rule: "required",
+          errorMessage: "La ciudad es requerida",
+        },
+        {
+          rule: "minLength",
+          value: 2,
+          errorMessage: "La ciudad debe tener al menos 2 caracteres",
+        },
+      ])
+      .addField("#message", [
+        {
+          rule: "required",
+          errorMessage: "El mensaje es requerido",
+        },
+        {
+          rule: "minLength",
+          value: 10,
+          errorMessage: "El mensaje debe tener al menos 10 caracteres",
+        },
+      ])
+      .onSuccess((event) => {
+        console.log("Validación exitosa");
+        const formData = new FormData(event.target);
+        const data = {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          country: formData.get("country"),
+          city: formData.get("city"),
+          message: formData.get("message"),
+        };
+        console.log("Datos del formulario:", data);
+
+        // event.currentTarget.submit();
+      });
+  }
 });
