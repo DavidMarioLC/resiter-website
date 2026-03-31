@@ -27,7 +27,7 @@
             </li>
           </ol>
         </nav>
-        <h1 class="page-banner__title">EQUIPO CON VISIÓN SOSTENIBLE</h1>
+        <h1 class="page-banner__title">CONTACTO</h1>
       </div>
       <span class="page-banner__overlay"></span>
       <img
@@ -38,21 +38,93 @@
         class="page-banner__image"
       />
     </section>
-    <section class="hero-skew">
-      <div class="hero-skew__content">
-        <h2 class="hero-skew__title">Titulo de la sección</h2>
-        <p class="hero-skew__description">
-          Para proyectar el futuro, hay que honrar el camino recorrido. La
-          historia no es solo una línea de tiempo, es la base que ha forjado a
-          la empresa como líder en la gestión de residuos sostenibles y en la
-          transición para un futuro de economías circulares.
-        </p>
-      </div>
+    <section class="hero-skew hero-skew--contact">
       <img
         src="./assets/images/waves-decorate.svg"
         alt="Decorative waves"
         class="hero-skew__decoration"
       />
     </section>
+    <form class="contact-form" id="form">
+      <h1 class="contact-form__title">Formulario de Contacto</h1>
+      <p class="contact-form__description">
+        Agradecemos que complete el formulario para contactarnos con usted.
+      </p>
+      <div class="contact-form__container">
+        <!-- Nombre (Ancho completo) -->
+        <div class="contact-form__group contact-form__group--full">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="contact-form__input"
+            placeholder="Nombre*"
+            required
+          />
+        </div>
+
+        <!-- E-mail -->
+        <div class="contact-form__group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="contact-form__input"
+            placeholder="E-mail*"
+            required
+          />
+        </div>
+
+        <!-- Teléfono -->
+        <div class="contact-form__group">
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="contact-form__input"
+            placeholder="Teléfono"
+          />
+        </div>
+
+        <!-- País -->
+        <div class="contact-form__group">
+          <input
+            type="text"
+            id="country"
+            name="country"
+            class="contact-form__input"
+            placeholder="País*"
+            required
+          />
+        </div>
+
+        <!-- Ciudad -->
+        <div class="contact-form__group">
+          <input
+            type="text"
+            id="city"
+            name="city"
+            class="contact-form__input"
+            placeholder="Ciudad*"
+            required
+          />
+        </div>
+
+        <!-- Mensaje (Ancho completo) -->
+        <div class="contact-form__group contact-form__group--full">
+          <textarea
+            id="message"
+            name="message"
+            class="contact-form__textarea"
+            placeholder="Mensaje*"
+            required
+          ></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="contact-form__button">Enviar</button>
+    </form>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
